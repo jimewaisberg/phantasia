@@ -1000,7 +1000,44 @@ font-family: "Josefin Sans", sans-serif;}
 }
 
 
+@media (max-width: 768px) {
+  nav {
+    width: 90%;
+  }
 
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .headerimagen img {
+    padding-bottom: 60px;
+  }
 
+  .section_img img {
+    padding-left: 0;
+  }
 
+  .section_texto,
+  .section_texto1,
+  .section_texto2,
+  .section_texto3,
+  .section_texto4 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section_img img,
+  .section_img1 img {
+    width: 100%;
+    padding: 0;
+  }
+
+  .section h2 {
+    font-size: 30px;
+  }
+
+  .section_texto p {
+    font-size: 14px;
+  }
+}
