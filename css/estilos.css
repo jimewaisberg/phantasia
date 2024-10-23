@@ -204,34 +204,6 @@ nav a:hover {
   background-color: #A7B5BD; 
 }
 
-.menu-hamburguesa {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.menu-hamburguesa div {
-  width: 100%;
-  height: 3px;
-  background-color: black;
-}
-
-/* Menú activo */
-.menu.active {
-  display: block;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0;
-  background-color: white;
-  padding: 10px;
-  text-align: center;
-  z-index: 999;
-}
-
 /*footer*/
 
 footer {
@@ -497,6 +469,7 @@ footer {
   padding: 7px 0;
   font-weight: 300;
 }
+
 
 /*artista*/
 
@@ -999,6 +972,11 @@ font-family: "Josefin Sans", sans-serif;}
 
 
 @media (max-width: 768px) {
+
+  .alert {
+    max-width: 90%;
+  }
+
   nav {
     width: 90%;
   }
@@ -1108,59 +1086,66 @@ font-family: "Josefin Sans", sans-serif;}
 
 
   /*artistas*/
-  .seccion3 {
-    flex-direction: row; 
-    padding: 60px 20px;
-  }
-
-  .titulo-vertical1 {
-    font-size: 40px; 
-    margin-left: 0;
-    text-align: center; 
-  }
-
-  .imagen-arco5 img {
-    width: 100%; 
-    margin-bottom: 20px; 
-  }
-
-
-  .parrafo3 {
-    font-size: 14px;
-    text-align: center; 
-    line-height: 1.6;
-    padding: 0 20px; 
-  }
-
-  .contenedor1, .contenedor2 {
-    flex-direction: row; 
-    align-items: center;
-    margin-bottom: 50px;
-  }
   
-  .artista-contenedor img, .artista-contenedor1 img {
-    width: 100%; /* Imágenes ocupan todo el ancho disponible */
-    margin-bottom: 20px; /* Añade espacio debajo de las imágenes */
-  }
+    .seccion3 {
+      flex-direction: column;
+      padding: 60px 20px; /* Reduce padding en pantallas pequeñas */
+    }
   
-  .texto-contenedor, .texto-contenedor1 {
-    max-width: 100%; /* Texto ocupa todo el ancho */
-    text-align: center; /* Centra el texto */
-  }
+    .titulo-vertical1 {
+      font-size: 40px; /* Reduce el tamaño del título */
+      margin-right: 0;
+      text-align: center; /* Alinea el título al centro */
+    }
   
-  .artistatitulo1, .artistatitulo2 {
-    font-size: 36px;
-    padding: 0;
-    text-align: center;
-    margin-bottom: 20px;
-  }
+    .parrafo3 {
+      font-size: 14px; /* Reduce el tamaño del texto */
+      margin-right: 0;
+      text-align: center; /* Centra el texto */
+      line-height: 1.6; /* Ajusta el interlineado */
+      padding: 0 20px; /* Ajusta padding para pantallas pequeñas */
+    }
   
-  .parrafo1, .parrafo3 {
-    font-size: 14px;
-    line-height: 1.6;
-    text-align: center;
-    padding: 0 20px;
-  }
+    .contenedor1, .contenedor2 {
+      flex-direction: column; /* Coloca las imágenes sobre el texto */
+      align-items: center;
+      margin-bottom: 50px; /* Reduce el margen inferior */
+    }
+  
+    .artista-contenedor img, .artista-contenedor1 img {
+      width: 100%; /* Asegura que las imágenes ocupen todo el ancho disponible */
+      max-width: 100%; /* Asegura que no excedan el ancho de la pantalla */
+      margin-bottom: 20px; /* Espacio debajo de las imágenes */
+    }
+  
+    .texto-contenedor, .texto-contenedor1 {
+      max-width: 100%; /* El texto ocupa todo el ancho disponible */
+      text-align: center; /* Centra el texto */
+      padding: 0 20px; /* Añade algo de padding lateral */
+    }
+  
+    .artistatitulo1, .artistatitulo2 {
+      font-size: 36px; /* Reduce el tamaño del título */
+      padding: 0;
+      text-align: center; /* Alinea el título al centro */
+      margin-bottom: 20px;
+    }
+  
+    .parrafo1 {
+      font-size: 14px; /* Reduce el tamaño del texto */
+      line-height: 1.6; /* Ajusta el interlineado */
+      text-align: center; /* Centra el texto */
+      padding: 0 20px; /* Ajusta padding para pantallas pequeñas */
+    }
+
+    .parrafo3 {
+     
+      font-size: 14px; /* Reduce el tamaño del texto */
+      line-height: 1.6; /* Ajusta el interlineado */
+      text-align: center; /* Centra el texto */
+      padding: 0 20px; /* Ajusta padding para pantallas pequeñas */
+    }
+  
 
   /*artista*/
   .fotoandre {
@@ -1190,36 +1175,106 @@ font-family: "Josefin Sans", sans-serif;}
   }
 
    /*blog*/
+   .parrafo4 {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 20px;
+  }
 
+  .titulo3 {
+    padding-top: 100px;
+    padding-bottom: 10px;
+    font-size: 200%;
+  }
 
+  .contenedor3 {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+  }
 
+  .imagen-arco {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+  }
 
-  /*contacto*/
+  .imagen-arco img {
+    max-width: 80%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .texto-arco p {
+    font-size: 14px;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contenedor4 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .imagen-arco1 {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .parrafo2 {
+    font-size: 14px;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .imagen-arco1 img {
+    max-width: 80%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .contenedor5 {
+    padding-bottom: 50px;
+    padding-top: 30px;
+  }
+
+  .texto-arco1 p {
+    font-size: 14px;
+    padding-left: 0;
+    text-align: center;
+  }
+
   .content-container {
-    flex-direction: column;    /* Los elementos están en columna */
-    align-items: center;       /* Centra los elementos */
-    width: 100%;               /* Ocupa todo el ancho */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     margin-top: 20px;
   }
 
-  /* Ajuste del formulario para pantallas pequeñas */
   .form-caja {
-    width: 95%;                /* Ocupa el 95% del ancho en pantallas pequeñas */
-    height: auto;              /* Altura automática para evitar el corte */
-    padding: 20px;             /* Espacio interno adicional */
-    margin: 10px auto;         /* Espacio entre la parte superior e inferior */
-    display: block;            /* Asegura que se vea completo */
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    margin: 10px auto;
+    display: block;
   }
 
-  /* Asegura que la galería esté debajo del formulario */
   .gallery-container {
-    width: 100%;               /* Galería ocupa el 100% del ancho */
-    margin-top: 20px;          /* Espacio entre el formulario y la galería */
+    width: 100%;
+    margin-top: 20px;
   }
 
-  /* Disposición de la galería en pantallas pequeñas */
   .gallery {
-    grid-template-columns: repeat(2, 1fr); /* Galería de 2 columnas */
-    grid-auto-rows: 150px;                 /* Ajusta la altura de las filas */
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
   }
 }
