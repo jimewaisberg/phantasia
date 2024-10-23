@@ -204,6 +204,33 @@ nav a:hover {
   background-color: #A7B5BD; 
 }
 
+.menu-hamburguesa {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.menu-hamburguesa div {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+
+/* Menú activo */
+.menu.active {
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  z-index: 999;
+}
 
 /*footer*/
 
@@ -316,28 +343,27 @@ footer {
 /*nosotros*/
 
 .contenedor {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	padding-left: 50px;
-	padding-top: 130px
-		
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
+  padding-top: 130px;
 }
 
 .imagen-arco4 img {
   display: block;
   width: 115%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .titulo-vertical {
-  writing-mode: vertical-rl; 
-  transform: rotate(180deg); 
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
   font-size: 50px;
-  margin-left: 80px; 
+  margin-left: 80px;
   font-family: "Josefin Sans", sans-serif;
-  color:#A7B5BD;
-	font-weight: 100;
+  color: #A7B5BD;
+  font-weight: 100;
 }
 
 .seccion {
@@ -347,146 +373,120 @@ footer {
 .container {
   display: flex;
   align-items: center;
-  flex-direction: row-reverse; 
+  flex-direction: row-reverse;
 }
 
 .imagen-contenedor {
-  margin-left: 5px; 
+  margin-left: 5px;
 }
 
 .imagen-contenedor img {
-  width: 100%; 
+  width: 100%;
 }
 
 .parrafonosotros {
-	max-width: 600px; 
-	font-family: "Bebas Neue", sans-serif;
-	font-weight: 300;
-	line-height: 1.6;
-	border-left: 3px solid #A7B5BD;
-	padding: 0 30px 12px 40px;
-	text-align: left
-	
+  max-width: 600px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  border-left: 3px solid #A7B5BD;
+  padding: 0 30px 12px 40px;
+  text-align: left;
 }
 
-.paises{
-	font-size: 40px;
-	text-align: center;
-	margin: 70px 50px 100px;
-	font-family: "Bebas Neue", sans-serif;
+.paises {
+  font-size: 40px;
+  text-align: center;
+  margin: 70px 50px 100px;
+  font-family: "Bebas Neue", sans-serif;
 }
 
-.surrealismo_lista{
-	display: flex;
-	flex-flow: wrap;
-	margin: 50px;
-	font-family: "Josefin Sans", sans-serif;
-	font-weight: 300;
-	line-height: 1.6;
-	text-align: left;
+.surrealismo_lista {
+  display: flex;
+  flex-flow: wrap;
+  margin: 50px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: left;
 }
-.surrealismo_lista_img{
-	width: 20%;
-	text-align: center
+
+.surrealismo_lista_img {
+  width: 20%;
+  text-align: center;
 }
-.surrealismo_lista_p{width: 70%}
 
-.surrealismo_lista img{width: 100px;
-text-align: center}
+.surrealismo_lista_p {
+  width: 70%;
+}
 
+.surrealismo_lista img {
+  width: 100px;
+  text-align: center;
+}
 
 
 /*artistas*/
 .seccion3 {
   display: flex;
-  justify-content: flex-end; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   padding: 110px 50px;
   font-weight: 300;
-	
-	
-	
 }
 
 .titulo-vertical1 {
-	writing-mode: vertical-rl;
-	transform: rotate(180deg); 
-	margin-right: 20px;
-	font-size: 60px;
-	font-family: "Josefin Sans", sans-serif;
-	color:#835728;	
-
+  writing-mode: vertical-rl;
+  transform: rotate(180deg); 
+  margin-right: 20px;
+  font-size: 60px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #835728; 
 }
 
 .imagen-arco5 img {
   width: 100%;
+ 
 }
 
 .parrafo3 {
-	font-size: 16px;
-	font-family: "Bebas Neue", sans-serif;
-	color: #333;
-	line-height: 1.8;
-	margin-right: 70px;
-	text-align: left;
-	font-weight: 300;
+  font-size: 16px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #333;
+  line-height: 1.8;
+  margin-right: 70px;
+  text-align: left;
+  font-weight: 300;
 }
 
-.contenedor1 {
+.contenedor1, .contenedor2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   margin-bottom: 120px; 
+  padding: 20px;
 }
 
-.artista-contenedor img {
-  width: 450px; 
+.artista-contenedor img, .artista-contenedor1 img {
+  width: 100%; 
+  max-width: 450px; 
   height: auto;
-  margin-right: 30px; 
+  margin-bottom: 20px; 
 }
 
-.texto-contenedor {
+.texto-contenedor, .texto-contenedor1 {
   max-width: 600px; 
-  text-align: left; 
-	
+  text-align: center;
+  padding: 0 20px;
 }
 
-.artistatitulo1 {
-	font-size: 58px;
-    font-family: "Josefin Sans", sans-serif;
-	color: #835728;
-	margin-bottom: 10px;
-	font-weight: 300;
-	padding: 20px 0 0 20px
-}
-
-.contenedor2 {
-  display: flex;
-  align-items: center; 
-  justify-content: center;
-  margin-bottom: 120px; 
-
-}
-
-.artista-contenedor1 img {
-  width: 450px; 
-  height: auto;
-  margin-left: 30px; 
-}
-
-.texto-contenedor1 {
-  max-width: 600px; 
-  text-align: left;
-	
-}
-
-.artistatitulo2 {
-  font-size: 58px;
+.artistatitulo1, .artistatitulo2 {
+  font-size: 48px;
   font-family: "Josefin Sans", sans-serif;
-  color: #835728; 
+  color: #835728;
   margin-bottom: 10px;
   font-weight: 300;
-  padding: 20px 0 0 20px
 }
 
 .parrafo1 {
@@ -494,10 +494,8 @@ text-align: center}
   font-family: "Bebas Neue", sans-serif;
   color: black;
   line-height: 1.8; 
-  padding: 7px 0 0 20px;
+  padding: 7px 0;
   font-weight: 300;
-	
-	
 }
 
 /*artista*/
@@ -820,7 +818,7 @@ text-align: center}
 }
 
 .form-caja{
-	width: 380px;
+	width: 80px;
 	height: 480px;
 	position: relative;
 	margin: 6% auto;
@@ -1039,5 +1037,189 @@ font-family: "Josefin Sans", sans-serif;}
 
   .section_texto p {
     font-size: 14px;
+  }
+
+  /*FOOTER*/
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left, .footer-right {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .footer-left h2 {
+    font-size: 20px;
+  }
+
+  .subscribe-form input, .subscribe-form button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .social-icons a {
+    margin-right: 5px;
+  }
+
+
+  /*nosotros*/
+
+
+  .imagen-arco4 img {
+    width: 100%; 
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px
+  }
+
+  .container {
+    flex-direction: column; 
+    
+  }
+
+  .titulo-vertical {
+    font-size: 40px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .paises {
+    font-size: 28px; 
+    margin: 30px 20px 50px;
+  }
+
+  .surrealismo_lista {
+    flex-direction:inherit;
+    margin: 3px; 
+  }
+  
+
+
+  /*artistas*/
+  .seccion3 {
+    flex-direction: row; 
+    padding: 60px 20px;
+  }
+
+  .titulo-vertical1 {
+    font-size: 40px; 
+    margin-left: 0;
+    text-align: center; 
+  }
+
+  .imagen-arco5 img {
+    width: 100%; 
+    margin-bottom: 20px; 
+  }
+
+
+  .parrafo3 {
+    font-size: 14px;
+    text-align: center; 
+    line-height: 1.6;
+    padding: 0 20px; 
+  }
+
+  .contenedor1, .contenedor2 {
+    flex-direction: row; 
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .artista-contenedor img, .artista-contenedor1 img {
+    width: 100%; /* Imágenes ocupan todo el ancho disponible */
+    margin-bottom: 20px; /* Añade espacio debajo de las imágenes */
+  }
+  
+  .texto-contenedor, .texto-contenedor1 {
+    max-width: 100%; /* Texto ocupa todo el ancho */
+    text-align: center; /* Centra el texto */
+  }
+  
+  .artistatitulo1, .artistatitulo2 {
+    font-size: 36px;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .parrafo1, .parrafo3 {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  /*artista*/
+  .fotoandre {
+    width: 100%; 
+    margin-bottom: 40px; 
+  }
+
+   /*galeria*/
+   .contenedorcarrusel {
+    width: 100%;
+  }
+  .carrusel {
+    width: 90%; 
+  }
+  .carrusel-item {
+    flex: 0 0 100%;
+    height: 500px;
+  }
+  .botoncarrusel {
+    font-size: 30px; 
+  }
+  .prev {
+    left: -10px;
+  }
+  .next {
+    right: -10px;
+  }
+
+   /*blog*/
+
+
+
+
+  /*contacto*/
+  .content-container {
+    flex-direction: column;    /* Los elementos están en columna */
+    align-items: center;       /* Centra los elementos */
+    width: 100%;               /* Ocupa todo el ancho */
+    margin-top: 20px;
+  }
+
+  /* Ajuste del formulario para pantallas pequeñas */
+  .form-caja {
+    width: 95%;                /* Ocupa el 95% del ancho en pantallas pequeñas */
+    height: auto;              /* Altura automática para evitar el corte */
+    padding: 20px;             /* Espacio interno adicional */
+    margin: 10px auto;         /* Espacio entre la parte superior e inferior */
+    display: block;            /* Asegura que se vea completo */
+  }
+
+  /* Asegura que la galería esté debajo del formulario */
+  .gallery-container {
+    width: 100%;               /* Galería ocupa el 100% del ancho */
+    margin-top: 20px;          /* Espacio entre el formulario y la galería */
+  }
+
+  /* Disposición de la galería en pantallas pequeñas */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Galería de 2 columnas */
+    grid-auto-rows: 150px;                 /* Ajusta la altura de las filas */
   }
 }

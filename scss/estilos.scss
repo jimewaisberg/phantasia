@@ -7,6 +7,8 @@ $font-main: "Bebas Neue", sans-serif;
 $font-secondary: "Josefin Sans", sans-serif;
 $padding-standard: 20px;
 $transition-duration: 0.3s;
+@import "node_modules/bootstrap/scss/bootstrap";
+
 
 // Mixins
 @mixin flex-center {
