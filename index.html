@@ -3,6 +3,9 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
+  <meta name="keywords" content="surrealismo, arte surrealista, vanguardia, movimiento surrealista, artistas surrealistas, Salvador Dalí, André Breton, Max Ernst, Remedios Varo, arte experimental, sueños, subconsciente, surrealismo moderno, historia del surrealismo, técnicas surrealistas, revolución artística, imaginería surrealista, arte y psicoanálisis, cultura surrealista">
+  <meta name="author" content="Jimena Waisberg">
+  <link rel="shortcut icon" href="../img/surrealismologo.png" type="image/x-icon">
   <title>Surrealismo</title>
   <link rel="stylesheet" href="./css/estilos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,8 +15,12 @@
 
 <body>
   <header>
-    <a href="./index.html"><img src="./img/surrealismologo.png"  alt="Surrealismo" class="surrealismologo"></a>
-    <nav id="navegador">
+    <a href="./index.html"><img src="./img/surrealismologo.png" alt="Surrealismo" class="surrealismologo"></a>
+    <button class="menu-toggle" aria-label="Abrir menú">
+      &#9776; 
+    </button>
+    
+    <nav id="navegador" class="nav-links">
       <a href="./subpaginas/nosotros.html">NOSOTROS</a>
       <a href="./subpaginas/artistas.html">ARTISTAS</a>
       <a href="./subpaginas/galeria.html">GALERIA</a>
@@ -22,12 +29,12 @@
     </nav>
   </header>
 
+
   <section>
     <div class="headerimagen">
       <img src="./img/fotoprincipal.png"  alt="Imagen principal">
     </div>
-
-    <div class="alert alert-info" role="alert" style="max-width: 80%; margin: 0 auto; text-align: center;">
+    <div class="alert alert-info" role="alert" style="max-width: 80%; margin: 20px auto; text-align: center;">
       Bienvenidos a esta nueva aventura!
     </div>
     
@@ -131,6 +138,13 @@
     </div>
     
   </footer>
+
+  <script>
+   document.querySelector('.menu-toggle').addEventListener('click', function () {
+  document.querySelector('.nav-links').classList.toggle('active');
+});
+
+  </script>
 
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

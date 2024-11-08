@@ -37,6 +37,7 @@ body {
   padding: 0;
 }
 
+/* Header */
 header {
   @include flex-center(space-between, center);
   padding: 10px 20px;
@@ -49,6 +50,15 @@ header {
 
   img {
     width: 95px;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; 
   }
 
   nav {
@@ -69,6 +79,14 @@ header {
   }
 }
 
+.headerimagen {
+  margin-top: 100px;
+  text-align: left;
+
+  img {
+    width: 100%; 
+  }
+}
 
 .section {
   @include flex-center(space-between, center);
@@ -110,7 +128,7 @@ header {
       font-size: $font-large;
       font-family: $font-main;
       font-weight: 300;
-      
+
       &:nth-of-type(1) {
         color: $accent-color1;
       }
@@ -158,7 +176,7 @@ header {
   }
 }
 
-
+/* Footer */
 footer {
   background-color: $accent-color1;
   padding: 40px;
@@ -253,6 +271,8 @@ footer {
   }
 }
 
+/* Otros estilos */
+
 .contenedor {
   @include flex-center(flex-start, center);
   padding-left: 50px;
@@ -327,7 +347,7 @@ footer {
   }
 }
 
-
+/* seccion3 */
 .seccion3 {
   @include flex-center(center);
   padding: 110px 50px;
@@ -393,7 +413,7 @@ footer {
   }
 }
 
-
+/* form-caja */
 .form-caja {
   width: 80px;
   height: 480px;
@@ -450,6 +470,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+  .alert {
+    max-width: 90%;
+  }
+
   nav {
     width: 90%;
   }
@@ -463,37 +488,48 @@ footer {
     padding-bottom: 60px;
   }
 
-  .section_img img,
-  .section_img1 img {
+  .section {
+    flex-direction: column;
+    padding: 30px 10px;
+    min-height: auto;
+  }
+
+  .section_img, .section_img1 {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .section_img img, .section_img1 img {
     width: 100%;
     padding: 0;
   }
 
-  .section_texto,
-  .section_texto1,
-  .section_texto2,
-  .section_texto3,
-  .section_texto4 {
+  .section_texto, .section_texto1, .section_texto2, .section_texto3, .section_texto4 {
     width: 100%;
     text-align: center;
+    padding: 0 10px;
   }
 
-  .section h2 {
-    font-size: 30px;
+  .section_texto h2, .section_texto1 h2, .section_texto2 h2, .section_texto3 h2, .section_texto4 h2 {
+    font-size: 32px;
+    max-width: 100%;
   }
 
-  .section_texto p {
-    font-size: $font-small;
+  .section_texto p, .section_texto1 p, .section_texto2 p, .section_texto3 p, .section_texto4 p {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 10px;
   }
 
+  /* FOOTER */
   .footer-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .footer-left,
-  .footer-right {
+  .footer-left, .footer-right {
     width: 100%;
     margin-bottom: 15px;
   }
@@ -502,9 +538,8 @@ footer {
     font-size: 20px;
   }
 
-  .subscribe-form input,
-  .subscribe-form button {
-    font-size: $font-small;
+  .subscribe-form input, .subscribe-form button {
+    font-size: 14px;
     padding: 8px;
   }
 
@@ -519,67 +554,234 @@ footer {
     margin-right: 5px;
   }
 
+  /* nosotros */
   .imagen-arco4 img {
-    width: 100%;
+    width: 100%; 
     margin-bottom: 20px;
     padding-top: 20px;
     padding-bottom: 40px;
   }
 
   .container {
-    flex-direction: column;
+    flex-direction: column; 
   }
 
   .titulo-vertical {
-    font-size: 40px;
-    margin: 20px;
+    font-size: 40px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 
   .paises {
-    font-size: 28px;
+    font-size: 28px; 
     margin: 30px 20px 50px;
   }
 
+  .surrealismo_lista {
+    flex-direction: inherit;
+    margin: 3px; 
+  }
+
+  /* artistas */
   .seccion3 {
     flex-direction: column;
-    padding: 60px 20px;
+    padding: 60px 20px; 
   }
 
   .titulo-vertical1 {
-    font-size: 40px;
-    text-align: center;
+    font-size: 40px; 
+    margin-right: 0;
+    text-align: center; 
   }
 
   .parrafo3 {
-    font-size: $font-small;
-    text-align: center;
-    padding: 0 20px;
+    font-size: 14px; 
+    margin-right: 0;
+    text-align: center; 
+    line-height: 1.6; 
+    padding: 0 20px; 
   }
 
-  .contenedor1,
-  .contenedor2 {
+  .contenedor1, .contenedor2 {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 50px; 
   }
 
-  .artistatitulo1,
-  .artistatitulo2 {
+  .artista-contenedor img, .artista-contenedor1 img {
+    width: 100%; 
+    max-width: 100%; 
+    margin-bottom: 20px; 
+  }
+
+  .texto-contenedor, .texto-contenedor1 {
+    max-width: 100%; 
+    text-align: center; 
+    padding: 0 20px; 
+  }
+
+  .artistatitulo1, .artistatitulo2 {
     font-size: 36px;
-    text-align: center;
+    padding: 0;
+    text-align: center; 
     margin-bottom: 20px;
   }
 
   .parrafo1 {
-    font-size: $font-small;
+    font-size: 14px; 
+    line-height: 1.6; 
+    text-align: center; 
+    padding: 0 20px; 
+  }
+
+  .parrafo3 {
+    font-size: 14px; 
+    line-height: 1.6; 
+    text-align: center;
+    padding: 0 20px; 
+  }
+
+  /* artista */
+  .fotoandre {
+    width: 100%; 
+    margin-bottom: 40px; 
+  }
+
+  /* galeria */
+  .contenedorcarrusel {
+    width: 100%;
+  }
+
+  .carrusel {
+    width: 90%; 
+  }
+
+  .carrusel-item {
+    flex: 0 0 100%;
+    height: 500px;
+  }
+
+  /* blog */
+  .parrafo4 {
+    font-size: 14px;
+    line-height: 1.6;
     text-align: center;
     padding: 0 20px;
   }
 
-  .form-caja {
-    width: 95%;
-    height: auto;
-    padding: 20px;
-    margin: 10px auto;
+  .titulo3 {
+    padding-top: 100px;
+    padding-bottom: 10px;
+    font-size: 200%;
+  }
+
+  .contenedor3 {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .imagen-arco {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .imagen-arco img {
+    max-width: 80%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .texto-arco p {
+    font-size: 14px;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contenedor4 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .imagen-arco1 {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .parrafo2 {
+    font-size: 14px;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .imagen-arco1 img {
+    max-width: 80%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .contenedor5 {
+    padding-bottom: 50px;
+    padding-top: 30px;
+  }
+
+  .texto-arco1 p {
+    font-size: 14px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  /* menu hamburguesa */
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 60px; 
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+  }
+
+  /* contacto */
+  .content-container {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 40px; 
+    margin-bottom: 20px; 
+    margin-top: 20px; 
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .gallery-container {
+    width: 100%; 
   }
 }

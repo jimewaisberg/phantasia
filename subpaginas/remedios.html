@@ -3,24 +3,35 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  <title>remedios</title>
+  <meta name="keywords" content="Remedios Varo, surrealismo, arte surrealista, pintora surrealista, México, artista española, simbolismo, misticismo, espiritualidad, magia, alquimia, feminismo en el arte, obras de Remedios Varo, La creación de las aves, influencia surrealista, surrealismo en México, técnica surrealista, sueños y fantasía">
+  <meta name="author" content="Jimena Waisberg">
+  <link rel="shortcut icon" href="../img/surrealismologo.png" type="image/x-icon">
+  <title>Remedios</title>
   <link rel="stylesheet" href="../css/estilos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <a href="../index.html"><img src="../img/surrealismologo.png"  alt="Surrealismo" class="surrealismologo"></a>
-    <nav id="navegador">
+    <div class="header-content">
+      <a href="../index.html"><img src="../img/surrealismologo.png" alt="Surrealismo" class="surrealismologo"></a>
+      
+
+      <button class="menu-toggle" aria-label="Abrir menú">
+        &#9776; 
+      </button>
+    </div>
+    
+    <nav class="nav-links">
       <a href="nosotros.html">NOSOTROS</a>
       <a href="artistas.html">ARTISTAS</a>
-      <a href="galeria.html">GALERIA</a>
+      <a href="galeria.html">GALERÍA</a>
       <a href="blog.html">BLOG</a>
       <a href="contacto.html">CONTACTO</a>
     </nav>
   </header>
-	
 	
    <section>
 		  <div class="tituloandre">
@@ -76,6 +87,11 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
 	

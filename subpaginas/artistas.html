@@ -1,47 +1,58 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
-	<meta name = "viewport" content = "width = device-width,initial-scale = 1.0">
-<meta charset="utf-8">
-<title>Artistas</title>
-<link rel="stylesheet" href="../css/estilos.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	<style>
-
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="artistas surrealistas, surrealismo, arte surrealista, Salvador Dalí, André Breton, Max Ernst, Remedios Varo, René Magritte, biografías de artistas, obras surrealistas, movimiento surrealista, historia del surrealismo, creatividad, exploración artística, vanguardia, influencia surrealista, subconsciente en el arte">
+  <meta name="author" content="Jimena Waisberg">
+  <link rel="shortcut icon" href="../img/surrealismologo.png" type="image/x-icon">
+  <title>Artistas</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <a href="../index.html"><img src="../img/surrealismologo.png" alt="Surrealismo" class="surrealismologo"></a>
-    <nav id="navegador">
+    <div class="header-content">
+      <a href="../index.html"><img src="../img/surrealismologo.png" alt="Surrealismo" class="surrealismologo"></a>
+      
+   
+      <button class="menu-toggle" aria-label="Abrir menú">
+        &#9776; 
+      </button>
+    </div>
+    
+    <nav class="nav-links">
       <a href="nosotros.html">NOSOTROS</a>
       <a href="artistas.html">ARTISTAS</a>
-      <a href="galeria.html">GALERIA</a>
+      <a href="galeria.html">GALERÍA</a>
       <a href="blog.html">BLOG</a>
       <a href="contacto.html">CONTACTO</a>
     </nav>
   </header>
 
   <body>
+    <section class="seccion3">
+     
+  <div class="floating-shape"></div>
+  <div class="floating-shape"></div>
+  <div class="floating-shape"></div>
+  <div class="floating-eye"></div>
+  <div class="melting-clock"></div>
 
-
-<section class="seccion3">
-	<div class="texto-contenedor1">
-    <div class="imagen-arco5">
-      <img src="../img/fotoartista.png" alt="Imagen Sección1">
-  </div>
-  <div class="artistatitulo1">
-    ARTISTAS
-</div>
-    </div>
-    <p class="parrafo3">
-      En esta sección, te presentamos a los artistas más influyentes del surrealismo, un movimiento que desafió las normas establecidas del arte y exploró lo onírico, lo irracional y lo fantástico. A través de técnicas innovadoras como el automatismo, el collage y la asociación libre de ideas, estos creadores lograron plasmar en sus obras lo más profundo del inconsciente. Cada uno de ellos, desde pintores hasta escultores y cineastas, dejó una huella imborrable en la historia del arte, revolucionando nuestra manera de percibir la realidad y expandiendo los límites de la imaginación.
-      </p>
-      
-</section>
+      <div class="texto-contenedor1">
+        <div class="imagen-arco5">
+          <img src="../img/fotoartista.png" alt="Imagen Sección1">
+        </div>
+        <div class="artistatitulo1">
+          ARTISTAS
+        </div>
+      </div>
+      <p class="parrafo3">
+         En esta sección, te presentamos a los artistas más influyentes del surrealismo, un movimiento que desafió las normas establecidas del arte y exploró lo onírico, lo irracional y lo fantástico. A través de técnicas innovadoras como el automatismo, el collage y la asociación libre de ideas, estos creadores lograron plasmar en sus obras lo más profundo del inconsciente. Cada uno de ellos, desde pintores hasta escultores y cineastas, dejó una huella imborrable en la historia del arte, revolucionando nuestra manera de percibir la realidad y expandiendo los límites de la imaginación.
+    </section>
 
 <section class="artista1">
 	<a href="andre.html" class="section_link">
@@ -158,7 +169,11 @@ Nacida en 1908 en España, Remedios Varo estudió en la  <br>Academia de  San Fe
       </div>
     </div>
   </footer>
-
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
 	
 </body>
 </html>
